@@ -2,6 +2,7 @@ package HospitalMS.controller;
 
 import java.util.List;
 
+import HospitalMS.dto.BillRequestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class BillController {
     private BillService service;
 
     @PostMapping
-    public Bill generateBill(@RequestBody Bill bill) {
+    public Bill generateBill(@RequestBody BillRequestDTO bill) {
         return service.generateBill(bill);
     }
 

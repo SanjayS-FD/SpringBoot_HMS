@@ -2,6 +2,7 @@ package HospitalMS.controller;
 
 import java.util.List;
 
+import HospitalMS.dto.DoctorRequestDTO;
 import HospitalMS.model.Patient;
 import HospitalMS.service.PatientService;
 import org.hibernate.annotations.NamedEntityGraphs;
@@ -26,7 +27,7 @@ public class DoctorController {
     }
 
     @PostMapping
-    public Doctor saveDoctor(@RequestBody Doctor doctor){
+    public Doctor saveDoctor(@RequestBody DoctorRequestDTO doctor){
         return service.saveDoctor(doctor);
     }
 
@@ -48,7 +49,7 @@ public class DoctorController {
     }
 
     @PutMapping("/{id}")
-    public Doctor updateDoctor(@PathVariable String id, @RequestBody Doctor doctor) {
+    public Doctor updateDoctor(@PathVariable String id, @RequestBody DoctorRequestDTO doctor) {
         doctor.setDoctorId(id);
         return service.saveDoctor(doctor);
     }

@@ -2,6 +2,7 @@ package HospitalMS.service;
 
 import java.util.List;
 
+import HospitalMS.dto.PatientRequestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,15 @@ public class PatientService {
     @Autowired
     private PatientRepository repository;
 
-    public Patient savePatient(Patient patient) {
+    public Patient savePatient(PatientRequestDTO dto) {
+
+        Patient patient = new Patient();
+        patient.setPatientId(dto.getPatientId());
+        patient.setName(dto.getName());
+        patient.setGender(dto.getGender());
+        patient.setAddress(dto.getAddress());
+        patient.setPhoneNum(dto.getPhoneNum());
+        patient.setAge(dto.getAge());
         return repository.save(patient);
     }
 

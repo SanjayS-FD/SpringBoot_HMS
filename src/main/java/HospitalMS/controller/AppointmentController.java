@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import HospitalMS.model.Appointment;
-import HospitalMS.service.AppointmentService;
+import HospitalMS.serviceInterfaces.AppointmentServiceInterface;
 
 @RestController
 @RequestMapping("/appointments")
 public class AppointmentController {
 
     @Autowired
-    private AppointmentService service;
+    private AppointmentServiceInterface service;
 
     @GetMapping
     public List<Appointment> getAllAppointments() {

@@ -2,6 +2,7 @@ package HospitalMS.controller;
 
 import java.util.List;
 
+import HospitalMS.dto.PatientRequestDTO;
 import org.hibernate.annotations.NamedEntityGraphs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,7 @@ public class PatientController {
     }
 
     @PostMapping
-    public Patient savePatient(@RequestBody Patient patient){
+    public Patient savePatient(@RequestBody PatientRequestDTO patient){
         return service.savePatient(patient);
     }
 
@@ -45,7 +46,7 @@ public class PatientController {
     }
 
     @PutMapping("/{id}")
-    public Patient updatePatient(@PathVariable String id, @RequestBody Patient patient) {
+    public Patient updatePatient(@PathVariable String id, @RequestBody PatientRequestDTO patient) {
         patient.setPatientId(id);
         return service.savePatient(patient);
     }

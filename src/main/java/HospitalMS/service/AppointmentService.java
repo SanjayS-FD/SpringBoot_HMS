@@ -4,6 +4,7 @@ import java.util.List;
 
 import HospitalMS.dto.AppointmentRequestDTO;
 import HospitalMS.exception.AppointmentConflictException;
+import HospitalMS.serviceInterfaces.AppointmentServiceInterface;
 import org.jspecify.annotations.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ import HospitalMS.model.Patient;
 import HospitalMS.model.Doctor;
 
 @Service
-public class AppointmentService {
+public class AppointmentService implements AppointmentServiceInterface {
 
     @Autowired
     private AppointmentRepository appointmentRepository;

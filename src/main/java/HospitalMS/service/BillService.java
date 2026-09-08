@@ -3,6 +3,7 @@ package HospitalMS.service;
 import java.time.LocalDate;
 import java.util.List;
 
+import HospitalMS.dto.BillRequestDTO;
 import HospitalMS.exception.AppointmentConflictException;
 import HospitalMS.model.Appointment;
 import HospitalMS.model.Bill;
@@ -26,7 +27,8 @@ public class BillService {
     @Autowired
     private DoctorRepository doctorRepository;
 
-    public Bill generateBill(Bill bill) {
+
+    public Bill generateBill(BillRequestDTO bill) {
 
         if (billRepository.existsByAppointmentId(bill.getAppointmentId())) {
             throw new AppointmentConflictException("Bill already generated for this appointment");
@@ -48,12 +50,16 @@ public class BillService {
 
         double totalAmount = consultationFee + bill.getMedicineCost();
 
-        bill.setConsultationFee(consultationFee);
+        Bill generatedBill = new Bill();
 
-        bill.setTotalAmount(totalAmount);
+        generatedBill.setBillId(bill.getBillId());
+        generatedBill.setAppointmentId(bill.getAppointmentId());
+        generatedBill.setMedicineCost(bill.getMedicineCost());
+        generatedBill.setConsultationFee(consultationFee);
+        generatedBill.setTotalAmount(totalAmount);
+        generatedBill.setBillDate(LocalDate.now().toString());
 
-        bill.setBillDate(LocalDate.now().toString());
-        return billRepository.save(bill);
+        return billRepository.save(generatedBill);
     }
 
     private double getConsultationFee(String specialization) {
