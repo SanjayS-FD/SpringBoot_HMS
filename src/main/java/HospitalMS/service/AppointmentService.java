@@ -2,6 +2,7 @@ package HospitalMS.service;
 
 import java.util.List;
 
+import HospitalMS.dto.AppointmentRequestDTO;
 import HospitalMS.exception.AppointmentConflictException;
 import org.jspecify.annotations.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,8 @@ import HospitalMS.model.Appointment;
 import HospitalMS.repository.AppointmentRepository;
 import HospitalMS.repository.DoctorRepository;
 import HospitalMS.repository.PatientRepository;
+import HospitalMS.model.Patient;
+import HospitalMS.model.Doctor;
 
 @Service
 public class AppointmentService {
@@ -25,27 +28,32 @@ public class AppointmentService {
     @Autowired
     private DoctorRepository doctorRepository;
 
-    public Appointment bookAppointment(Appointment app){
-        if (!patientRepository.existsById(app.getPatientId())){
-            throw new PatientNotFoundException("Patient not found");
-        }
+    public Appointment bookAppointment(AppointmentRequestDTO dto) {
 
-        if (!doctorRepository.existsById(app.getDoctorId())){
-            throw new DoctorNotFoundException("Doctor not found");
-        }
+        Patient patient = patientRepository.findById(dto.getPatientId())
+                        .orElseThrow(() -> new PatientNotFoundException("Patient not found"));
 
-        boolean alreadyBooked = appointmentRepository.existsByDoctorIdAndAppointmentDateAndAppointmentTime(
-                app.getDoctorId(),
-                app.getAppointmentDate(),
-                app.getAppointmentTime());
+        Doctor doctor = doctorRepository.findById(dto.getDoctorId())
+                        .orElseThrow(() -> new DoctorNotFoundException("Doctor not found"));
+
+        boolean alreadyBooked = appointmentRepository.existsByDoctor_DoctorIdAndAppointmentDateAndAppointmentTime(
+                                dto.getDoctorId(),
+                                dto.getAppointmentDate(),
+                                dto.getAppointmentTime());
 
         if (alreadyBooked) {
             throw new AppointmentConflictException("Doctor already booked for this slot");
         }
 
-        app.setStatus("BOOKED");
-        System.out.println("Appointment Booked Successfully!");
-        return appointmentRepository.save(app);
+        Appointment appointment = new Appointment();
+        appointment.setAppointmentId(dto.getAppointmentId());
+        appointment.setPatient(patient);
+        appointment.setDoctor(doctor);
+        appointment.setAppointmentDate(dto.getAppointmentDate());
+        appointment.setAppointmentTime(dto.getAppointmentTime());
+        appointment.setStatus("BOOKED");
+
+        return appointmentRepository.save(appointment);
     }
 
     public Appointment getAppointmentById(String id) {
@@ -60,10 +68,25 @@ public class AppointmentService {
         appointmentRepository.deleteById(id);
     }
 
-    public Appointment updateAppointment(String id, @NonNull Appointment app){
-        app.setAppointmentId(id);
-        return appointmentRepository.save(app);
+    public Appointment updateAppointment(String id, AppointmentRequestDTO dto) {
+
+        Patient patient = patientRepository.findById(dto.getPatientId())
+                        .orElseThrow(() -> new PatientNotFoundException("Patient not found"));
+
+        Doctor doctor = doctorRepository.findById(dto.getDoctorId())
+                        .orElseThrow(() -> new DoctorNotFoundException("Doctor not found"));
+
+        Appointment appointment = appointmentRepository.findById(id)
+                        .orElseThrow(() -> new AppointmentConflictException("Appointment not found"));
+
+        appointment.setPatient(patient);
+        appointment.setDoctor(doctor);
+        appointment.setAppointmentDate(dto.getAppointmentDate());
+
+        appointment.setAppointmentTime(dto.getAppointmentTime());
+        return appointmentRepository.save(appointment);
     }
+
 
     public Appointment completeAppointment(String appointmentId) {
 
@@ -71,6 +94,10 @@ public class AppointmentService {
         if (appointment == null) {
             return null;
         }
+        if ("CANCELLED".equals(appointment.getStatus())) {
+            throw new AppointmentConflictException("Cancelled appointments cannot be completed");
+        }
+
         appointment.setStatus("COMPLETED");
         return appointmentRepository.save(appointment);
     }
@@ -83,7 +110,7 @@ public class AppointmentService {
             return null;
         }
         if ("COMPLETED".equals(appointment.getStatus())) {
-            throw new RuntimeException("Cannot Cancel for a completed appointment");
+            throw new AppointmentConflictException("Cannot Cancel for a completed appointment");
 
         }
         appointment.setStatus("CANCELLED");

@@ -13,9 +13,9 @@ public class Bill {
     private String billId;
 
     private String appointmentId;
-    private double consultationFee;
-    private double medicineCost;
-    private double totalAmount;
+    private Double consultationFee;
+    private Double medicineCost;
+    private Double totalAmount;
     private String billDate;
 
 
@@ -38,27 +38,27 @@ public class Bill {
         this.appointmentId = appointmentId;
     }
 
-    public double getConsultationFee() {
+    public Double getConsultationFee() {
         return consultationFee;
     }
 
-    public void setConsultationFee(double consultationFee) {
+    public void setConsultationFee(Double consultationFee) {
         this.consultationFee = consultationFee;
     }
 
-    public double getMedicineCost() {
+    public Double getMedicineCost() {
         return medicineCost;
     }
 
-    public void setMedicineCost(double medicineCost) {
+    public void setMedicineCost(Double medicineCost) {
         this.medicineCost = medicineCost;
     }
 
-    public double getTotalAmount() {
+    public Double getTotalAmount() {
         return totalAmount;
     }
 
-    public void setTotalAmount(double totalAmount) {
+    public void setTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
     }
 

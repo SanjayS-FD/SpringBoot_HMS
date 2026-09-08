@@ -15,7 +15,7 @@ public class Patient {
     private String gender;
     private String address;
     private String phoneNum;
-    private int age;
+    private Integer age;
 
     public Patient() {
     }
@@ -70,7 +70,7 @@ public class Patient {
         this.phoneNum = phoneNum;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 

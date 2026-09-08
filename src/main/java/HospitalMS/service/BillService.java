@@ -40,7 +40,7 @@ public class BillService {
             throw new AppointmentConflictException("Bill can only be generated for completed appointments");
         }
 
-        Doctor doctor = doctorRepository.findById(appointment.getDoctorId())
+        Doctor doctor = doctorRepository.findById(appointment.getDoctor().getDoctorId())
                               .orElseThrow(() -> new AppointmentConflictException("Doctor not found"));
 
 

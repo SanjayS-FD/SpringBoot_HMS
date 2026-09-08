@@ -2,7 +2,11 @@ package HospitalMS.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
+import jakarta.persistence.JoinColumn;
+
 
 @Entity
 @Table(name="appointments")
@@ -11,8 +15,14 @@ public class Appointment {
     @Id
     private String appointmentId;
 
-    private String patientId;
-    private String doctorId;
+    @ManyToOne
+    @JoinColumn(name = "patient_id")
+    private Patient patient;
+
+    @ManyToOne
+    @JoinColumn(name = "doctor_id")
+    private Doctor doctor;
+
     private String appointmentDate;
     private String appointmentTime;
     private String status;
@@ -29,20 +39,20 @@ public class Appointment {
         this.appointmentId = appointmentId;
     }
 
-    public String getPatientId() {
-        return patientId;
+    public Patient getPatient() {
+        return patient;
     }
 
-    public void setPatientId(String patientId) {
-        this.patientId = patientId;
+    public void setPatient(Patient patient) {
+        this.patient = patient;
     }
 
-    public String getDoctorId() {
-        return doctorId;
+    public Doctor getDoctor() {
+        return doctor;
     }
 
-    public void setDoctorId(String doctorId) {
-        this.doctorId = doctorId;
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
     }
 
     public String getAppointmentDate() {
@@ -68,5 +78,4 @@ public class Appointment {
     public void setStatus(String status) {
         this.status = status;
     }
-
 }
