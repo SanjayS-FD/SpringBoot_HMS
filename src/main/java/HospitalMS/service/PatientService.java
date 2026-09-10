@@ -3,6 +3,7 @@ package HospitalMS.service;
 import java.util.List;
 
 import HospitalMS.dto.PatientRequestDTO;
+import HospitalMS.serviceInterfaces.PatientServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import HospitalMS.model.Patient;
 import HospitalMS.repository.PatientRepository;
 
 @Service
-public class PatientService {
+public class PatientService implements PatientServiceInterface {
 
     @Autowired
     private PatientRepository repository;

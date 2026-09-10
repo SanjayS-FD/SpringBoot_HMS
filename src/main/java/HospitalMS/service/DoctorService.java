@@ -4,6 +4,7 @@ import java.util.List;
 
 import HospitalMS.dto.DoctorRequestDTO;
 import HospitalMS.model.Patient;
+import HospitalMS.serviceInterfaces.DoctorServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import HospitalMS.model.Doctor;
 import HospitalMS.repository.DoctorRepository;
 
 @Service
-public class DoctorService {
+public class DoctorService implements DoctorServiceInterface {
 
     @Autowired
     private DoctorRepository repository;

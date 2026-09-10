@@ -12,11 +12,12 @@ import HospitalMS.repository.AppointmentRepository;
 import HospitalMS.repository.BillRepository;
 import HospitalMS.repository.DoctorRepository;
 
+import HospitalMS.serviceInterfaces.BillServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BillService {
+public class BillService implements BillServiceInterface {
 
     @Autowired
     private BillRepository billRepository;

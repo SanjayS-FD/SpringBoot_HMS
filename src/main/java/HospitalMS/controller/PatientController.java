@@ -3,6 +3,7 @@ package HospitalMS.controller;
 import java.util.List;
 
 import HospitalMS.dto.PatientRequestDTO;
+import HospitalMS.serviceInterfaces.PatientServiceInterface;
 import org.hibernate.annotations.NamedEntityGraphs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ import HospitalMS.service.PatientService;
 public class PatientController {
 
     @Autowired
-    private PatientService service;
+    private PatientServiceInterface service;
 
     @GetMapping
     public List<Patient> getAllPatients() {
