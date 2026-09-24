@@ -123,5 +123,19 @@ public class AppointmentService implements AppointmentServiceInterface {
         return appointmentRepository.save(appointment);
     }
 
+    @Override
+    public String checkAvailability(String doctorId, String date, String time) {
+
+        boolean booked = appointmentRepository.existsByDoctor_DoctorIdAndAppointmentDateAndAppointmentTime(
+                                doctorId,
+                                date,
+                                time);
+
+        if (booked) {
+            return "Doctor Not Available";
+        }
+
+        return "Doctor Available";
+    }
 
 }

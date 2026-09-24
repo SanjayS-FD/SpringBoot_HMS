@@ -20,4 +20,7 @@ public interface AppointmentServiceInterface {
     Appointment completeAppointment(String id);
 
     Appointment cancelAppointment(String id);
+
+    String checkAvailability(String doctorId, String date, String time);
+
 }

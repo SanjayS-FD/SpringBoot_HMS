@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import HospitalMS.model.Appointment;
 import HospitalMS.serviceInterfaces.AppointmentServiceInterface;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/appointments")
@@ -57,5 +58,10 @@ public class AppointmentController {
     @PutMapping("/{id}/cancel")
     public Appointment cancelAppointment(@PathVariable String id) {
         return service.cancelAppointment(id);
+    }
+
+    @GetMapping("/check-availability")
+    public String checkAvailability(@RequestParam String doctorId, @RequestParam String date, @RequestParam String time) {
+        return service.checkAvailability(doctorId, date, time);
     }
 }
