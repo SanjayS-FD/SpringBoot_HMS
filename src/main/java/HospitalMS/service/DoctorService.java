@@ -17,6 +17,7 @@ public class DoctorService implements DoctorServiceInterface {
     @Autowired
     private DoctorRepository repository;
 
+    @Override
     public Doctor saveDoctor(DoctorRequestDTO dto) {
 
         Doctor doc = new Doctor();
@@ -27,14 +28,17 @@ public class DoctorService implements DoctorServiceInterface {
         return repository.save(doc);
     }
 
+    @Override
     public Doctor getDoctorById(String id) {
         return repository.findById(id).orElse(null);
     }
 
+    @Override
     public List<Doctor> getAllDoctors() {
         return repository.findAll();
     }
 
+    @Override
     public void deleteDoctor(String id) {
         repository.deleteById(id);
     }

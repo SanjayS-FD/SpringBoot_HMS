@@ -16,6 +16,7 @@ public class PatientService implements PatientServiceInterface {
     @Autowired
     private PatientRepository repository;
 
+    @Override
     public Patient savePatient(PatientRequestDTO dto) {
 
         Patient patient = new Patient();
@@ -28,14 +29,17 @@ public class PatientService implements PatientServiceInterface {
         return repository.save(patient);
     }
 
+    @Override
     public Patient getPatientById(String id) {
         return repository.findById(id).orElse(null);
     }
 
+    @Override
     public List<Patient> getAllPatients() {
         return repository.findAll();
     }
 
+    @Override
     public void deletePatient(String id) {
         repository.deleteById(id);
     }

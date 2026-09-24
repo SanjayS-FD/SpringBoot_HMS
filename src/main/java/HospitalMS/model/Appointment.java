@@ -5,6 +5,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+
+import HospitalMS.enums.AppointmentStatus;
 import jakarta.persistence.JoinColumn;
 
 
@@ -25,7 +29,8 @@ public class Appointment {
 
     private String appointmentDate;
     private String appointmentTime;
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private AppointmentStatus status;
 
 
     public Appointment() {
@@ -71,11 +76,11 @@ public class Appointment {
         this.appointmentTime = appointmentTime;
     }
 
-    public String getStatus() {
+    public AppointmentStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(AppointmentStatus status) {
         this.status = status;
     }
 }

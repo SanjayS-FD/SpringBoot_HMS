@@ -3,9 +3,9 @@ package HospitalMS.service;
 import java.util.List;
 
 import HospitalMS.dto.AppointmentRequestDTO;
+import HospitalMS.enums.AppointmentStatus;
 import HospitalMS.exception.AppointmentConflictException;
 import HospitalMS.serviceInterfaces.AppointmentServiceInterface;
-import org.jspecify.annotations.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +29,8 @@ public class AppointmentService implements AppointmentServiceInterface {
     @Autowired
     private DoctorRepository doctorRepository;
 
+
+    @Override
     public Appointment bookAppointment(AppointmentRequestDTO dto) {
 
         Patient patient = patientRepository.findById(dto.getPatientId())
@@ -52,23 +54,27 @@ public class AppointmentService implements AppointmentServiceInterface {
         appointment.setDoctor(doctor);
         appointment.setAppointmentDate(dto.getAppointmentDate());
         appointment.setAppointmentTime(dto.getAppointmentTime());
-        appointment.setStatus("BOOKED");
+        appointment.setStatus(AppointmentStatus.BOOKED);
 
         return appointmentRepository.save(appointment);
     }
 
+    @Override
     public Appointment getAppointmentById(String id) {
         return appointmentRepository.findById(id).orElse(null);
     }
 
+    @Override
     public List<Appointment> getAllAppointments() {
         return appointmentRepository.findAll();
     }
 
+    @Override
     public void deleteAppointment(String id) {
         appointmentRepository.deleteById(id);
     }
 
+    @Override
     public Appointment updateAppointment(String id, AppointmentRequestDTO dto) {
 
         Patient patient = patientRepository.findById(dto.getPatientId())
@@ -88,33 +94,32 @@ public class AppointmentService implements AppointmentServiceInterface {
         return appointmentRepository.save(appointment);
     }
 
-
+    @Override
     public Appointment completeAppointment(String appointmentId) {
 
         Appointment appointment = appointmentRepository.findById(appointmentId).orElse(null);
         if (appointment == null) {
             return null;
         }
-        if ("CANCELLED".equals(appointment.getStatus())) {
+        if (AppointmentStatus.CANCELLED == appointment.getStatus()) {
             throw new AppointmentConflictException("Cancelled appointments cannot be completed");
         }
 
-        appointment.setStatus("COMPLETED");
+        appointment.setStatus(AppointmentStatus.COMPLETED);
         return appointmentRepository.save(appointment);
     }
 
-
+    @Override
     public Appointment cancelAppointment(String id) {
 
         Appointment appointment = appointmentRepository.findById(id).orElse(null);
         if (appointment == null) {
             return null;
         }
-        if ("COMPLETED".equals(appointment.getStatus())) {
-            throw new AppointmentConflictException("Cannot Cancel for a completed appointment");
-
+        if (appointment.getStatus() == AppointmentStatus.COMPLETED) {
+            throw new AppointmentConflictException("Cannot cancel a completed appointment");
         }
-        appointment.setStatus("CANCELLED");
+        appointment.setStatus(AppointmentStatus.CANCELLED);
         return appointmentRepository.save(appointment);
     }
 

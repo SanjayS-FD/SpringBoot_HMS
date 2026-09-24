@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import HospitalMS.dto.BillRequestDTO;
+import HospitalMS.enums.AppointmentStatus;
 import HospitalMS.exception.AppointmentConflictException;
 import HospitalMS.model.Appointment;
 import HospitalMS.model.Bill;
@@ -28,7 +29,7 @@ public class BillService implements BillServiceInterface {
     @Autowired
     private DoctorRepository doctorRepository;
 
-
+    @Override
     public Bill generateBill(BillRequestDTO bill) {
 
         if (billRepository.existsByAppointmentId(bill.getAppointmentId())) {
@@ -39,7 +40,7 @@ public class BillService implements BillServiceInterface {
         Appointment appointment = appointmentRepository.findById(bill.getAppointmentId())
                         .orElseThrow(() -> new AppointmentConflictException("Appointment not found"));
 
-        if (!"COMPLETED".equals(appointment.getStatus())) {
+        if (appointment.getStatus() != AppointmentStatus.COMPLETED) {
             throw new AppointmentConflictException("Bill can only be generated for completed appointments");
         }
 
@@ -74,14 +75,17 @@ public class BillService implements BillServiceInterface {
         };
     }
 
+    @Override
     public Bill getBillById(String id) {
         return billRepository.findById(id).orElse(null);
     }
 
+    @Override
     public List<Bill> getAllBills() {
         return billRepository.findAll();
     }
 
+    @Override
     public void deleteBill(String id) {
         billRepository.deleteById(id);
     }
