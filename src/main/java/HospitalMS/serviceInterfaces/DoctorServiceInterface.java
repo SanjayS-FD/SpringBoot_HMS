@@ -11,6 +11,8 @@ public interface DoctorServiceInterface {
 
     Doctor getDoctorById(String id);
 
+    Doctor updateDoctor(String id, DoctorRequestDTO dto);
+
     List<Doctor> getAllDoctors();
 
     void deleteDoctor(String id);

@@ -6,9 +6,13 @@ import org.springframework.stereotype.Repository;
 
 import HospitalMS.model.Appointment;
 
+import java.util.Optional;
+
 @Repository
 public interface AppointmentRepository
-        extends JpaRepository<Appointment, String> {
+        extends JpaRepository<Appointment, Long>{
+
+    Optional<Appointment> findByAppointmentId(String appointmentId);
 
     boolean existsByDoctor_DoctorIdAndAppointmentDateAndAppointmentTime(
             String doctorId,

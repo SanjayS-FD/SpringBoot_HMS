@@ -2,21 +2,12 @@ package HospitalMS.dto;
 
 public class AppointmentRequestDTO {
 
-    private String appointmentId;
     private String patientId;
     private String doctorId;
     private String appointmentDate;
     private String appointmentTime;
 
     public AppointmentRequestDTO() {
-    }
-
-    public String getAppointmentId() {
-        return appointmentId;
-    }
-
-    public void setAppointmentId(String appointmentId) {
-        this.appointmentId = appointmentId;
     }
 
     public String getPatientId() {

@@ -50,9 +50,11 @@ public class DoctorController {
     }
 
     @PutMapping("/{id}")
-    public Doctor updateDoctor(@PathVariable String id, @RequestBody DoctorRequestDTO doctor) {
-        doctor.setDoctorId(id);
-        return service.saveDoctor(doctor);
+    public Doctor updateDoctor(
+            @PathVariable String id,
+            @RequestBody DoctorRequestDTO doctor) {
+
+        return service.updateDoctor(id, doctor);
     }
 
 }

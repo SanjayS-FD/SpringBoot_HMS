@@ -5,8 +5,12 @@ import org.springframework.stereotype.Repository;
 
 import HospitalMS.model.Doctor;
 
+import java.util.Optional;
+
 @Repository
 public interface DoctorRepository
-        extends JpaRepository<Doctor, String> {
+        extends JpaRepository<Doctor, Long> {
+    Optional<Doctor> findByDoctorId(String doctorId);
+    boolean existsByDoctorId(String doctorId);
 
 }

@@ -2,7 +2,7 @@ package HospitalMS.dto;
 
 public class DoctorRequestDTO {
 
-    private String doctorId;
+
     private String name;
     private String specialization;
     private String phoneNumber;
@@ -34,11 +34,4 @@ public class DoctorRequestDTO {
         this.name = name;
     }
 
-    public String getDoctorId() {
-        return doctorId;
-    }
-
-    public void setDoctorId(String doctorId) {
-        this.doctorId = doctorId;
-    }
 }

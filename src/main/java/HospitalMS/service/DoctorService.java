@@ -21,16 +21,23 @@ public class DoctorService implements DoctorServiceInterface {
     public Doctor saveDoctor(DoctorRequestDTO dto) {
 
         Doctor doc = new Doctor();
-        doc.setDoctorId(dto.getDoctorId());
+
         doc.setName(dto.getName());
         doc.setPhoneNumber(dto.getPhoneNumber());
         doc.setSpecialization(dto.getSpecialization());
-        return repository.save(doc);
+
+        Doctor savedDoctor = repository.save(doc);
+
+        savedDoctor.setDoctorId(
+                "DOC-" + (1000 + savedDoctor.getId())
+        );
+
+        return repository.save(savedDoctor);
     }
 
     @Override
     public Doctor getDoctorById(String id) {
-        return repository.findById(id).orElse(null);
+        return repository.findByDoctorId(id).orElse(null);
     }
 
     @Override
@@ -40,6 +47,33 @@ public class DoctorService implements DoctorServiceInterface {
 
     @Override
     public void deleteDoctor(String id) {
-        repository.deleteById(id);
+        Doctor doctor =
+                repository.findByDoctorId(id)
+                        .orElse(null);
+
+        if (doctor != null) {
+            repository.delete(doctor);
+        }
+
+    }
+
+    @Override
+    public Doctor updateDoctor(
+            String id,
+            DoctorRequestDTO dto) {
+
+        Doctor doctor =
+                repository.findByDoctorId(id)
+                        .orElse(null);
+
+        if (doctor == null) {
+            return null;
+        }
+
+        doctor.setName(dto.getName());
+        doctor.setPhoneNumber(dto.getPhoneNumber());
+        doctor.setSpecialization(dto.getSpecialization());
+
+        return repository.save(doctor);
     }
 }

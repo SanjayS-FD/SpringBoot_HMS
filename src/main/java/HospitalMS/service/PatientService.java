@@ -20,19 +20,24 @@ public class PatientService implements PatientServiceInterface {
     public Patient savePatient(PatientRequestDTO dto) {
 
         Patient patient = new Patient();
-        patient.setPatientId(dto.getPatientId());
+
         patient.setName(dto.getName());
         patient.setGender(dto.getGender());
         patient.setAddress(dto.getAddress());
         patient.setPhoneNum(dto.getPhoneNum());
         patient.setAge(dto.getAge());
-        return repository.save(patient);
+
+        Patient savedPatient = repository.save(patient);
+        savedPatient.setPatientId("PAT-" + (1000 + savedPatient.getId()));
+
+        return repository.save(savedPatient);
     }
 
     @Override
     public Patient getPatientById(String id) {
-        return repository.findById(id).orElse(null);
+        return repository.findByPatientId(id).orElse(null);
     }
+
 
     @Override
     public List<Patient> getAllPatients() {
@@ -41,6 +46,32 @@ public class PatientService implements PatientServiceInterface {
 
     @Override
     public void deletePatient(String id) {
-        repository.deleteById(id);
+        Patient patient = repository.findByPatientId(id).orElse(null);
+
+        if (patient != null) {
+            repository.delete(patient);
+        }
+    }
+
+    @Override
+    public Patient updatePatient(
+            String id,
+            PatientRequestDTO dto) {
+
+        Patient patient =
+                repository.findByPatientId(id)
+                        .orElse(null);
+
+        if (patient == null) {
+            return null;
+        }
+
+        patient.setName(dto.getName());
+        patient.setGender(dto.getGender());
+        patient.setAddress(dto.getAddress());
+        patient.setPhoneNum(dto.getPhoneNum());
+        patient.setAge(dto.getAge());
+
+        return repository.save(patient);
     }
 }

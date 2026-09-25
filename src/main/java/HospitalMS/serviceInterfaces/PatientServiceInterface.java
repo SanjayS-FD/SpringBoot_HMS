@@ -14,4 +14,8 @@ public interface PatientServiceInterface {
     List<Patient> getAllPatients();
 
     void deletePatient(String id);
+
+    Patient updatePatient(
+            String id,
+            PatientRequestDTO dto);
 }

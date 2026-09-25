@@ -2,7 +2,7 @@ package HospitalMS.dto;
 
 public class BillRequestDTO {
 
-    private String billId;
+
 
     private String appointmentId;
 
@@ -11,13 +11,6 @@ public class BillRequestDTO {
     public BillRequestDTO() {
     }
 
-    public String getBillId() {
-        return billId;
-    }
-
-    public void setBillId(String billId) {
-        this.billId = billId;
-    }
 
     public String getAppointmentId() {
         return appointmentId;

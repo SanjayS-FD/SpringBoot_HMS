@@ -1,15 +1,8 @@
 package HospitalMS.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 
 import HospitalMS.enums.AppointmentStatus;
-import jakarta.persistence.JoinColumn;
 
 
 @Entity
@@ -17,6 +10,10 @@ import jakarta.persistence.JoinColumn;
 public class Appointment {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true)
     private String appointmentId;
 
     @ManyToOne
@@ -34,6 +31,14 @@ public class Appointment {
 
 
     public Appointment() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getAppointmentId() {

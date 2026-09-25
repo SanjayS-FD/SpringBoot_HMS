@@ -37,15 +37,22 @@ public class BillService implements BillServiceInterface {
         }
 
 
-        Appointment appointment = appointmentRepository.findById(bill.getAppointmentId())
-                        .orElseThrow(() -> new AppointmentConflictException("Appointment not found"));
+        Appointment appointment =
+                appointmentRepository.findByAppointmentId(
+                                bill.getAppointmentId())
+                        .orElseThrow(() ->
+                                new AppointmentConflictException(
+                                        "Appointment not found"));
 
         if (appointment.getStatus() != AppointmentStatus.COMPLETED) {
             throw new AppointmentConflictException("Bill can only be generated for completed appointments");
         }
 
-        Doctor doctor = doctorRepository.findById(appointment.getDoctor().getDoctorId())
-                              .orElseThrow(() -> new AppointmentConflictException("Doctor not found"));
+        Doctor doctor = doctorRepository.findByDoctorId(
+                        appointment.getDoctor().getDoctorId())
+                .orElseThrow(() ->
+                        new AppointmentConflictException(
+                                "Doctor not found"));
 
 
         double consultationFee = getConsultationFee(doctor.getSpecialization());
@@ -54,14 +61,21 @@ public class BillService implements BillServiceInterface {
 
         Bill generatedBill = new Bill();
 
-        generatedBill.setBillId(bill.getBillId());
+
         generatedBill.setAppointmentId(bill.getAppointmentId());
         generatedBill.setMedicineCost(bill.getMedicineCost());
         generatedBill.setConsultationFee(consultationFee);
         generatedBill.setTotalAmount(totalAmount);
         generatedBill.setBillDate(LocalDate.now().toString());
 
-        return billRepository.save(generatedBill);
+        Bill savedBill =
+                billRepository.save(generatedBill);
+
+        savedBill.setBillId(
+                "BILL-" + (1000 + savedBill.getId())
+        );
+
+        return billRepository.save(savedBill);
     }
 
     private double getConsultationFee(String specialization) {
@@ -77,7 +91,7 @@ public class BillService implements BillServiceInterface {
 
     @Override
     public Bill getBillById(String id) {
-        return billRepository.findById(id).orElse(null);
+        return billRepository.findByBillId(id).orElse(null);
     }
 
     @Override
@@ -87,6 +101,12 @@ public class BillService implements BillServiceInterface {
 
     @Override
     public void deleteBill(String id) {
-        billRepository.deleteById(id);
+        Bill bill =
+                billRepository.findByBillId(id)
+                        .orElse(null);
+
+        if (bill != null) {
+            billRepository.delete(bill);
+        }
     }
 }

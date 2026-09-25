@@ -2,7 +2,7 @@ package HospitalMS.dto;
 
 public class PatientRequestDTO {
 
-    private String patientId;
+
     private String name;
     private String gender;
     private String address;
@@ -12,13 +12,7 @@ public class PatientRequestDTO {
     public PatientRequestDTO() {
     }
 
-    public String getPatientId() {
-        return patientId;
-    }
 
-    public void setPatientId(String patientId) {
-        this.patientId = patientId;
-    }
 
     public String getName() {
         return name;

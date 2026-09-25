@@ -33,11 +33,16 @@ public class AppointmentService implements AppointmentServiceInterface {
     @Override
     public Appointment bookAppointment(AppointmentRequestDTO dto) {
 
-        Patient patient = patientRepository.findById(dto.getPatientId())
-                        .orElseThrow(() -> new PatientNotFoundException("Patient not found"));
+        Patient patient =
+                patientRepository.findByPatientId(
+                                dto.getPatientId())
+                        .orElseThrow(() ->
+                                new PatientNotFoundException(
+                                        "Patient not found"));
 
-        Doctor doctor = doctorRepository.findById(dto.getDoctorId())
-                        .orElseThrow(() -> new DoctorNotFoundException("Doctor not found"));
+        Doctor doctor = doctorRepository.findByDoctorId(dto.getDoctorId())
+                .orElseThrow(() ->
+                        new DoctorNotFoundException("Doctor not found"));
 
         boolean alreadyBooked = appointmentRepository.existsByDoctor_DoctorIdAndAppointmentDateAndAppointmentTime(
                                 dto.getDoctorId(),
@@ -49,19 +54,28 @@ public class AppointmentService implements AppointmentServiceInterface {
         }
 
         Appointment appointment = new Appointment();
-        appointment.setAppointmentId(dto.getAppointmentId());
+
         appointment.setPatient(patient);
         appointment.setDoctor(doctor);
         appointment.setAppointmentDate(dto.getAppointmentDate());
         appointment.setAppointmentTime(dto.getAppointmentTime());
         appointment.setStatus(AppointmentStatus.BOOKED);
 
-        return appointmentRepository.save(appointment);
+        Appointment savedAppointment =
+                appointmentRepository.save(appointment);
+
+        savedAppointment.setAppointmentId(
+                "APP-" + (1000 + savedAppointment.getId())
+        );
+
+        return appointmentRepository.save(
+                savedAppointment);
+
     }
 
     @Override
     public Appointment getAppointmentById(String id) {
-        return appointmentRepository.findById(id).orElse(null);
+        return appointmentRepository.findByAppointmentId(id).orElse(null);
     }
 
     @Override
@@ -71,20 +85,30 @@ public class AppointmentService implements AppointmentServiceInterface {
 
     @Override
     public void deleteAppointment(String id) {
-        appointmentRepository.deleteById(id);
+        Appointment appointment =
+                appointmentRepository.findByAppointmentId(id)
+                        .orElse(null);
+
+        if (appointment != null) {
+            appointmentRepository.delete(appointment);
+        }
     }
 
     @Override
     public Appointment updateAppointment(String id, AppointmentRequestDTO dto) {
 
-        Patient patient = patientRepository.findById(dto.getPatientId())
+        Patient patient = patientRepository.findByPatientId(dto.getPatientId())
                         .orElseThrow(() -> new PatientNotFoundException("Patient not found"));
 
-        Doctor doctor = doctorRepository.findById(dto.getDoctorId())
-                        .orElseThrow(() -> new DoctorNotFoundException("Doctor not found"));
+        Doctor doctor = doctorRepository.findByDoctorId(dto.getDoctorId())
+                .orElseThrow(() ->
+                        new DoctorNotFoundException("Doctor not found"));
 
-        Appointment appointment = appointmentRepository.findById(id)
-                        .orElseThrow(() -> new AppointmentConflictException("Appointment not found"));
+        Appointment appointment =
+                appointmentRepository.findByAppointmentId(id)
+                        .orElseThrow(() ->
+                                new AppointmentConflictException(
+                                        "Appointment not found"));
 
         appointment.setPatient(patient);
         appointment.setDoctor(doctor);
@@ -97,7 +121,7 @@ public class AppointmentService implements AppointmentServiceInterface {
     @Override
     public Appointment completeAppointment(String appointmentId) {
 
-        Appointment appointment = appointmentRepository.findById(appointmentId).orElse(null);
+        Appointment appointment = appointmentRepository.findByAppointmentId(appointmentId).orElse(null);
         if (appointment == null) {
             return null;
         }
@@ -112,7 +136,7 @@ public class AppointmentService implements AppointmentServiceInterface {
     @Override
     public Appointment cancelAppointment(String id) {
 
-        Appointment appointment = appointmentRepository.findById(id).orElse(null);
+        Appointment appointment = appointmentRepository.findByAppointmentId(id).orElse(null);
         if (appointment == null) {
             return null;
         }
