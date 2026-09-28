@@ -9,7 +9,10 @@ import org.springframework.stereotype.Service;
 
 import HospitalMS.model.Patient;
 import HospitalMS.repository.PatientRepository;
+import lombok.extern.slf4j.Slf4j;
 
+
+@Slf4j
 @Service
 public class PatientService implements PatientServiceInterface {
 
@@ -30,11 +33,21 @@ public class PatientService implements PatientServiceInterface {
         Patient savedPatient = repository.save(patient);
         savedPatient.setPatientId("PAT-" + (1000 + savedPatient.getId()));
 
+
+        log.info(
+                "Patient registered successfully with ID {}",
+                savedPatient.getPatientId());
+
         return repository.save(savedPatient);
+
     }
 
     @Override
     public Patient getPatientById(String id) {
+
+        log.info(
+                "Fetching patient with ID {}",
+                id);
         return repository.findByPatientId(id).orElse(null);
     }
 
@@ -47,6 +60,10 @@ public class PatientService implements PatientServiceInterface {
     @Override
     public void deletePatient(String id) {
         Patient patient = repository.findByPatientId(id).orElse(null);
+
+        log.warn(
+                "Deleting patient with ID {}",
+                id);
 
         if (patient != null) {
             repository.delete(patient);
@@ -72,6 +89,9 @@ public class PatientService implements PatientServiceInterface {
         patient.setPhoneNum(dto.getPhoneNum());
         patient.setAge(dto.getAge());
 
+        log.info(
+                "Updating patient with ID {}",
+                id);
         return repository.save(patient);
     }
 }

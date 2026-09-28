@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
+
 import HospitalMS.dto.AppointmentRequestDTO;
 import HospitalMS.enums.AppointmentStatus;
 import HospitalMS.exception.AppointmentConflictException;
@@ -20,6 +22,8 @@ import HospitalMS.repository.PatientRepository;
 import HospitalMS.model.Patient;
 import HospitalMS.model.Doctor;
 
+
+@Slf4j
 @Service
 public class AppointmentService implements AppointmentServiceInterface {
 
@@ -34,8 +38,12 @@ public class AppointmentService implements AppointmentServiceInterface {
 
 
     @Override
-    public Appointment bookAppointment(
-            AppointmentRequestDTO dto) {
+    public Appointment bookAppointment(AppointmentRequestDTO dto) {
+
+        log.info(
+                "Appointment booking request received for patient {} and doctor {}",
+                dto.getPatientId(),
+                dto.getDoctorId());
 
         Patient patient =
                 patientRepository.findByPatientId(
@@ -73,15 +81,23 @@ public class AppointmentService implements AppointmentServiceInterface {
         if (appointmentDate.isBefore(
                 LocalDate.now())) {
 
+            log.warn(
+                    "Invalid appointment time {}",
+                    appointmentTime);
+
             throw new AppointmentConflictException(
                     "Appointment date cannot be in the past");
         }
 
         if (appointmentDate.isAfter(
-                LocalDate.now().plusMonths(6))) {
+                LocalDate.now().plusMonths(3))) {
+
+            log.warn(
+                    "Appointment date {} exceeds booking window",
+                    appointmentDate);
 
             throw new AppointmentConflictException(
-                    "Appointments can only be booked up to 6 months in advance");
+                    "Appointments can only be booked up to 3 months in advance");
         }
 
         LocalTime startTime =
@@ -90,11 +106,14 @@ public class AppointmentService implements AppointmentServiceInterface {
         LocalTime endTime =
                 LocalTime.of(17, 0);
 
-        if (appointmentTime.isBefore(startTime)
-                || appointmentTime.isAfter(endTime)) {
+        if (appointmentDate.isBefore(LocalDate.now())) {
+
+            log.warn(
+                    "Attempted booking with past date {}",
+                    appointmentDate);
 
             throw new AppointmentConflictException(
-                    "Appointments can only be booked between 09:00 AM and 05:00 PM");
+                    "Appointment date cannot be in the past");
         }
 
         boolean alreadyBooked =
@@ -106,10 +125,15 @@ public class AppointmentService implements AppointmentServiceInterface {
 
         if (alreadyBooked) {
 
+            log.warn(
+                    "Doctor {} already booked on {} at {}",
+                    dto.getDoctorId(),
+                    dto.getAppointmentDate(),
+                    dto.getAppointmentTime());
+
             throw new AppointmentConflictException(
                     "Doctor already booked for this slot");
         }
-
         Appointment appointment =
                 new Appointment();
 
@@ -130,6 +154,10 @@ public class AppointmentService implements AppointmentServiceInterface {
                 "APP-" +
                         (1000 + savedAppointment.getId())
         );
+
+        log.info(
+                "Appointment booked successfully with ID {}",
+                savedAppointment.getAppointmentId());
 
         return appointmentRepository.save(
                 savedAppointment);
@@ -152,6 +180,11 @@ public class AppointmentService implements AppointmentServiceInterface {
                         .orElse(null);
 
         if (appointment != null) {
+
+            log.warn(
+                    "Deleting appointment {}",
+                    id);
+
             appointmentRepository.delete(appointment);
         }
     }
@@ -183,6 +216,10 @@ public class AppointmentService implements AppointmentServiceInterface {
     @Override
     public Appointment completeAppointment(String appointmentId) {
 
+        log.info(
+                "Completing appointment {}",
+                appointmentId);
+
         Appointment appointment = appointmentRepository.findByAppointmentId(appointmentId).orElse(null);
         if (appointment == null) {
             return null;
@@ -192,11 +229,19 @@ public class AppointmentService implements AppointmentServiceInterface {
         }
 
         appointment.setStatus(AppointmentStatus.COMPLETED);
+
+        log.info(
+                "Appointment {} marked as COMPLETED",
+                appointmentId);
         return appointmentRepository.save(appointment);
     }
 
     @Override
     public Appointment cancelAppointment(String id) {
+
+        log.warn(
+                "Cancelling appointment {}",
+                id);
 
         Appointment appointment = appointmentRepository.findByAppointmentId(id).orElse(null);
         if (appointment == null) {
@@ -206,11 +251,19 @@ public class AppointmentService implements AppointmentServiceInterface {
             throw new AppointmentConflictException("Cannot cancel a completed appointment");
         }
         appointment.setStatus(AppointmentStatus.CANCELLED);
+
+        log.info(
+                "Appointment {} marked as CANCELLED",
+                id);
         return appointmentRepository.save(appointment);
     }
 
     @Override
     public String checkAvailability(String doctorId, String date, String time) {
+
+        log.info(
+                "Availability check for doctor {}",
+                doctorId);
 
         boolean booked = appointmentRepository.existsByDoctor_DoctorIdAndAppointmentDateAndAppointmentTime(
                                 doctorId,
@@ -218,6 +271,13 @@ public class AppointmentService implements AppointmentServiceInterface {
                                 time);
 
         if (booked) {
+
+            log.warn(
+                    "Doctor {} unavailable on {} at {}",
+                    doctorId,
+                    date,
+                    time);
+
             return "Doctor Not Available";
         }
 

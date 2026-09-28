@@ -10,7 +10,10 @@ import org.springframework.stereotype.Service;
 
 import HospitalMS.model.Doctor;
 import HospitalMS.repository.DoctorRepository;
+import lombok.extern.slf4j.Slf4j;
 
+
+@Slf4j
 @Service
 public class DoctorService implements DoctorServiceInterface {
 
@@ -32,11 +35,19 @@ public class DoctorService implements DoctorServiceInterface {
                 "DOC-" + (1000 + savedDoctor.getId())
         );
 
+        log.info(
+                "Doctor created successfully with ID {}",
+                savedDoctor.getDoctorId());
+
         return repository.save(savedDoctor);
     }
 
     @Override
     public Doctor getDoctorById(String id) {
+
+        log.info(
+                "Fetching doctor with ID {}",
+                id);
         return repository.findByDoctorId(id).orElse(null);
     }
 
@@ -50,6 +61,10 @@ public class DoctorService implements DoctorServiceInterface {
         Doctor doctor =
                 repository.findByDoctorId(id)
                         .orElse(null);
+
+        log.warn(
+                "Deleting doctor with ID {}",
+                id);
 
         if (doctor != null) {
             repository.delete(doctor);

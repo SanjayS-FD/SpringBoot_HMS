@@ -14,9 +14,11 @@ import HospitalMS.repository.BillRepository;
 import HospitalMS.repository.DoctorRepository;
 
 import HospitalMS.serviceInterfaces.BillServiceInterface;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 public class BillService implements BillServiceInterface {
 
@@ -32,7 +34,15 @@ public class BillService implements BillServiceInterface {
     @Override
     public Bill generateBill(BillRequestDTO bill) {
 
+        log.info(
+                "Generating bill for appointment {}",
+                bill.getAppointmentId());
+
         if (billRepository.existsByAppointmentId(bill.getAppointmentId())) {
+
+            log.warn(
+                    "Duplicate bill generation attempt for appointment {}",
+                    bill.getAppointmentId());
             throw new AppointmentConflictException("Bill already generated for this appointment");
         }
 
@@ -74,6 +84,10 @@ public class BillService implements BillServiceInterface {
         savedBill.setBillId(
                 "BILL-" + (1000 + savedBill.getId())
         );
+
+        log.info(
+                "Bill generated successfully with ID {}",
+                savedBill.getBillId());
 
         return billRepository.save(savedBill);
     }
