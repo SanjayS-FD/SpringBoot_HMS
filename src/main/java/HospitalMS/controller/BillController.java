@@ -4,6 +4,7 @@ import java.util.List;
 
 import HospitalMS.dto.BillRequestDTO;
 import HospitalMS.serviceInterfaces.BillServiceInterface;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class BillController {
     private BillServiceInterface service;
 
     @PostMapping
-    public Bill generateBill(@RequestBody BillRequestDTO bill) {
+    public Bill generateBill(@Valid @RequestBody BillRequestDTO bill) {
         return service.generateBill(bill);
     }
 

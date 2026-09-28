@@ -1,12 +1,42 @@
 package HospitalMS.dto;
 
+import jakarta.validation.constraints.*;
+
 public class PatientRequestDTO {
 
 
+    @NotBlank(
+            message = "Patient name cannot be empty"
+    )
     private String name;
+
+    @NotBlank(
+            message = "Gender cannot be empty"
+    )
     private String gender;
+
+    @NotBlank(
+            message = "Address cannot be empty"
+    )
     private String address;
+
+    @Pattern(
+            regexp = "^[0-9]{10}$",
+            message = "Phone number must contain 10 digits"
+    )
     private String phoneNum;
+
+    @NotNull(
+            message = "Age is mandatory"
+    )
+    @Min(
+            value = 1,
+            message = "Age must be greater than 0"
+    )
+    @Max(
+            value = 120,
+            message = "Age cannot exceed 120"
+    )
     private Integer age;
 
     public PatientRequestDTO() {

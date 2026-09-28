@@ -1,5 +1,7 @@
 package HospitalMS.service;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 
 import HospitalMS.dto.AppointmentRequestDTO;
@@ -9,6 +11,7 @@ import HospitalMS.serviceInterfaces.AppointmentServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalTime;
 import  HospitalMS.exception.*;
 import HospitalMS.model.Appointment;
 import HospitalMS.repository.AppointmentRepository;
@@ -31,7 +34,8 @@ public class AppointmentService implements AppointmentServiceInterface {
 
 
     @Override
-    public Appointment bookAppointment(AppointmentRequestDTO dto) {
+    public Appointment bookAppointment(
+            AppointmentRequestDTO dto) {
 
         Patient patient =
                 patientRepository.findByPatientId(
@@ -40,37 +44,95 @@ public class AppointmentService implements AppointmentServiceInterface {
                                 new PatientNotFoundException(
                                         "Patient not found"));
 
-        Doctor doctor = doctorRepository.findByDoctorId(dto.getDoctorId())
-                .orElseThrow(() ->
-                        new DoctorNotFoundException("Doctor not found"));
+        Doctor doctor =
+                doctorRepository.findByDoctorId(
+                                dto.getDoctorId())
+                        .orElseThrow(() ->
+                                new DoctorNotFoundException(
+                                        "Doctor not found"));
 
-        boolean alreadyBooked = appointmentRepository.existsByDoctor_DoctorIdAndAppointmentDateAndAppointmentTime(
+        LocalDate appointmentDate;
+        LocalTime appointmentTime;
+
+        try {
+
+            appointmentDate =
+                    LocalDate.parse(
+                            dto.getAppointmentDate());
+
+            appointmentTime =
+                    LocalTime.parse(
+                            dto.getAppointmentTime());
+
+        } catch (DateTimeParseException e) {
+
+            throw new AppointmentConflictException(
+                    "Date must be in yyyy-MM-dd and time must be in HH:mm format");
+        }
+
+        if (appointmentDate.isBefore(
+                LocalDate.now())) {
+
+            throw new AppointmentConflictException(
+                    "Appointment date cannot be in the past");
+        }
+
+        if (appointmentDate.isAfter(
+                LocalDate.now().plusMonths(6))) {
+
+            throw new AppointmentConflictException(
+                    "Appointments can only be booked up to 6 months in advance");
+        }
+
+        LocalTime startTime =
+                LocalTime.of(9, 0);
+
+        LocalTime endTime =
+                LocalTime.of(17, 0);
+
+        if (appointmentTime.isBefore(startTime)
+                || appointmentTime.isAfter(endTime)) {
+
+            throw new AppointmentConflictException(
+                    "Appointments can only be booked between 09:00 AM and 05:00 PM");
+        }
+
+        boolean alreadyBooked =
+                appointmentRepository
+                        .existsByDoctor_DoctorIdAndAppointmentDateAndAppointmentTime(
                                 dto.getDoctorId(),
                                 dto.getAppointmentDate(),
                                 dto.getAppointmentTime());
 
         if (alreadyBooked) {
-            throw new AppointmentConflictException("Doctor already booked for this slot");
+
+            throw new AppointmentConflictException(
+                    "Doctor already booked for this slot");
         }
 
-        Appointment appointment = new Appointment();
+        Appointment appointment =
+                new Appointment();
 
         appointment.setPatient(patient);
         appointment.setDoctor(doctor);
-        appointment.setAppointmentDate(dto.getAppointmentDate());
-        appointment.setAppointmentTime(dto.getAppointmentTime());
-        appointment.setStatus(AppointmentStatus.BOOKED);
+        appointment.setAppointmentDate(
+                dto.getAppointmentDate());
+        appointment.setAppointmentTime(
+                dto.getAppointmentTime());
+        appointment.setStatus(
+                AppointmentStatus.BOOKED);
 
         Appointment savedAppointment =
-                appointmentRepository.save(appointment);
+                appointmentRepository.save(
+                        appointment);
 
         savedAppointment.setAppointmentId(
-                "APP-" + (1000 + savedAppointment.getId())
+                "APP-" +
+                        (1000 + savedAppointment.getId())
         );
 
         return appointmentRepository.save(
                 savedAppointment);
-
     }
 
     @Override

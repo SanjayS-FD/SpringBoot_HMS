@@ -1,10 +1,19 @@
 package HospitalMS.dto;
 
+import jakarta.validation.constraints.*;
+
 public class AppointmentRequestDTO {
 
+    @NotBlank(message = "Patient ID is required")
     private String patientId;
+
+    @NotBlank(message = "Doctor ID is required")
     private String doctorId;
+
+    @NotBlank(message = "Appointment date is required")
     private String appointmentDate;
+
+    @NotBlank(message = "Appointment time is required")
     private String appointmentTime;
 
     public AppointmentRequestDTO() {

@@ -3,6 +3,7 @@ package HospitalMS.controller;
 import java.util.List;
 
 import HospitalMS.dto.AppointmentRequestDTO;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +24,7 @@ public class AppointmentController {
     }
 
     @PostMapping
-    public Appointment bookAppointment(@RequestBody AppointmentRequestDTO appointment) {
+    public Appointment bookAppointment(@Valid @RequestBody AppointmentRequestDTO appointment) {
         return service.bookAppointment(appointment);
     }
 
@@ -46,7 +47,7 @@ public class AppointmentController {
     }
 
     @PutMapping("/{id}")
-    public Appointment updateAppointment(@PathVariable String id, @RequestBody AppointmentRequestDTO dto) {
+    public Appointment updateAppointment(@Valid @PathVariable String id, @RequestBody AppointmentRequestDTO dto) {
         return service.updateAppointment(id, dto);
     }
 

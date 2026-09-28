@@ -13,6 +13,7 @@ public class Patient {
     @Column(unique = true)
     private String patientId;
 
+
     private String name;
     private String gender;
     private String address;
