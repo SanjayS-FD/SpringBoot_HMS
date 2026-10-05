@@ -1,0 +1,15 @@
+Doctor Schedule Report
+Date : 2026-10-05
+
+Doctor : DOC-1001 (Dr. Prithika)
+Appointments : 0
+---------------------------------
+Doctor : DOC-1002 (Dr. Dharvesh)
+Appointments : 0
+---------------------------------
+Doctor : DOC-1004 (Dr. Nanda)
+Appointments : 0
+---------------------------------
+Doctor : DOC-1003 (Dr. Sasmitaa)
+Appointments : 0
+---------------------------------

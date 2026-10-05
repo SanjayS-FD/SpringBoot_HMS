@@ -1,0 +1,1188 @@
+2026-10-05 22:04:02 INFO  HospitalMS.HospitalmsApplication - Starting HospitalmsApplication using Java 17.0.12 with PID 26312 (D:\Work\Practice\SpringBoot\hospitalms\target\classes started by FD01954 in D:\Work\Practice\SpringBoot\hospitalms)
+2026-10-05 22:04:02 DEBUG HospitalMS.HospitalmsApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-05 22:04:02 INFO  HospitalMS.HospitalmsApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-05 22:04:02 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-05 22:04:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05 22:04:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+2026-10-05 22:04:03 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-05 22:04:03 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:04:03 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-05 22:04:03 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-05 22:04:03 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1090 ms
+2026-10-05 22:04:03 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05 22:04:03 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-05 22:04:03 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05 22:04:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-05 22:04:03 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39c5a105
+2026-10-05 22:04:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-05 22:04:04 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hospital_db1]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: hospital_db1/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05 22:04:04 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05 22:04:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:04:05 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05 22:04:05 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05 22:04:05 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:04:05 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-05 22:04:05 INFO  HospitalMS.HospitalmsApplication - Started HospitalmsApplication in 4.079 seconds (process running for 4.653)
+2026-10-05 22:04:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:04:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:05:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:05:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:05:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:05:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:05:40 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-05 22:05:40 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-05 22:05:40 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-10-05 22:05:40 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start property name]
+2026-10-05 22:06:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:06:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:06:05 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): expected a value]
+2026-10-05 22:06:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:06:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:07:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:07:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:07:10 INFO  HospitalMS.service.PatientService - Updating patient with ID PAT-1004
+2026-10-05 22:07:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:07:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:07:43 INFO  H.service.AppointmentService - Completing appointment APP-1013
+2026-10-05 22:07:43 INFO  H.service.AppointmentService - Appointment APP-1013 marked as COMPLETED
+2026-10-05 22:07:47 INFO  H.service.AppointmentService - Completing appointment APP-1014
+2026-10-05 22:07:47 INFO  H.service.AppointmentService - Appointment APP-1014 marked as COMPLETED
+2026-10-05 22:07:57 INFO  H.service.AppointmentService - Completing appointment APP-1018
+2026-10-05 22:07:57 INFO  H.service.AppointmentService - Appointment APP-1018 marked as COMPLETED
+2026-10-05 22:08:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:08:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:08:07 WARN  H.service.AppointmentService - Cancelling appointment APP-1017
+2026-10-05 22:08:07 INFO  H.service.AppointmentService - Appointment APP-1017 marked as CANCELLED
+2026-10-05 22:08:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:08:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:08:35 INFO  HospitalMS.service.BillService - Generating bill for appointment APP-1013
+2026-10-05 22:08:35 INFO  HospitalMS.service.BillService - Bill generated successfully with ID BILL-1002
+2026-10-05 22:08:47 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected end-of-input: expected close marker for Object (start marker at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN])]
+2026-10-05 22:09:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:09:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:09:03 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected end-of-input: expected close marker for Object (start marker at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN])]
+2026-10-05 22:09:07 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected end-of-input: expected close marker for Object (start marker at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN])]
+2026-10-05 22:09:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:09:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:09:36 INFO  HospitalMS.service.BillService - Generating bill for appointment APP-1014
+2026-10-05 22:09:36 INFO  HospitalMS.service.BillService - Bill generated successfully with ID BILL-1003
+2026-10-05 22:10:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:10:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:10:29 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:10:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:10:59 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:11:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:11:29 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:11:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:11:59 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:12:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:12:29 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:12:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:12:59 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:12:59 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:13:29 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:13:29 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:13:59 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:14:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:14:29 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:14:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:14:59 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:15:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:15:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:15:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:16:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:16:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:16:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:16:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:16:55 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-05 22:16:55 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-05 22:16:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:16:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-05 22:16:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-05 22:20:33 INFO  HospitalMS.HospitalmsApplication - Starting HospitalmsApplication using Java 17.0.12 with PID 10056 (D:\Work\Practice\SpringBoot\hospitalms\target\classes started by FD01954 in D:\Work\Practice\SpringBoot\hospitalms)
+2026-10-05 22:20:33 DEBUG HospitalMS.HospitalmsApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-05 22:20:33 INFO  HospitalMS.HospitalmsApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-05 22:20:33 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-05 22:20:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05 22:20:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
+2026-10-05 22:20:34 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-05 22:20:34 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:20:34 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-05 22:20:34 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-05 22:20:34 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1205 ms
+2026-10-05 22:20:34 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05 22:20:34 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-05 22:20:35 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05 22:20:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-05 22:20:35 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11582db6
+2026-10-05 22:20:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-05 22:20:35 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hospital_db1]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: hospital_db1/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05 22:20:36 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05 22:20:37 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:20:37 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05 22:20:37 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05 22:20:38 WARN  o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 4aec67c2-e4b4-42d5-94eb-af21f36c6cca
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-05 22:20:38 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-05 22:20:39 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:20:39 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-05 22:20:39 INFO  HospitalMS.HospitalmsApplication - Started HospitalmsApplication in 6.356 seconds (process running for 6.862)
+2026-10-05 22:21:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:21:00 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-05 22:21:00 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-05 22:21:00 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-10-05 22:21:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:21:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:21:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:22:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:22:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:22:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:22:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:23:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:23:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:23:15 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-05 22:23:15 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-05 22:23:15 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:23:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-05 22:23:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-05 22:23:18 INFO  HospitalMS.HospitalmsApplication - Starting HospitalmsApplication using Java 17.0.12 with PID 16900 (D:\Work\Practice\SpringBoot\hospitalms\target\classes started by FD01954 in D:\Work\Practice\SpringBoot\hospitalms)
+2026-10-05 22:23:18 DEBUG HospitalMS.HospitalmsApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-05 22:23:18 INFO  HospitalMS.HospitalmsApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-05 22:23:19 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-05 22:23:19 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05 22:23:19 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2026-10-05 22:23:19 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-05 22:23:19 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:23:19 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-05 22:23:19 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-05 22:23:19 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1163 ms
+2026-10-05 22:23:20 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05 22:23:20 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-05 22:23:20 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05 22:23:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-05 22:23:20 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2f3cd727
+2026-10-05 22:23:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-05 22:23:20 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hospital_db1]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: hospital_db1/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05 22:23:21 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05 22:23:21 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:23:21 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05 22:23:21 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05 22:23:21 WARN  o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7fe29422-3d96-4be8-89d0-40aac4354996
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-05 22:23:21 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-05 22:23:22 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:23:22 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-05 22:23:22 INFO  HospitalMS.HospitalmsApplication - Started HospitalmsApplication in 3.961 seconds (process running for 4.405)
+2026-10-05 22:23:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:23:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:23:31 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-05 22:23:31 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-05 22:23:31 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-10-05 22:24:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:24:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:24:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:24:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:25:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:25:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:25:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:25:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:26:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:26:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:26:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:26:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:27:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:27:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:27:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:27:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:28:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:28:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:28:04 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-05 22:28:05 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-05 22:28:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:28:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-05 22:28:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-05 22:28:09 INFO  HospitalMS.HospitalmsApplication - Starting HospitalmsApplication using Java 17.0.12 with PID 27376 (D:\Work\Practice\SpringBoot\hospitalms\target\classes started by FD01954 in D:\Work\Practice\SpringBoot\hospitalms)
+2026-10-05 22:28:09 DEBUG HospitalMS.HospitalmsApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-05 22:28:09 INFO  HospitalMS.HospitalmsApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-05 22:28:09 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-05 22:28:10 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05 22:28:10 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+2026-10-05 22:28:10 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-05 22:28:10 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:28:10 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-05 22:28:10 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-05 22:28:10 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1173 ms
+2026-10-05 22:28:10 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05 22:28:10 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-05 22:28:11 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05 22:28:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-05 22:28:11 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75de7009
+2026-10-05 22:28:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-05 22:28:11 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hospital_db1]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: hospital_db1/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05 22:28:13 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05 22:28:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:28:13 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05 22:28:14 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05 22:28:14 WARN  o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: de5c9e4b-db8c-41d1-9fdc-3f05c9a6ae98
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-05 22:28:14 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-05 22:28:14 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:28:14 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-05 22:28:14 INFO  HospitalMS.HospitalmsApplication - Started HospitalmsApplication in 5.795 seconds (process running for 6.28)
+2026-10-05 22:28:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:28:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:29:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:29:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:29:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:29:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:30:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:30:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:30:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:30:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:31:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:31:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:31:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:31:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:32:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:32:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:32:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:32:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:33:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:33:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:33:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:33:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:33:44 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-05 22:33:44 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-05 22:33:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:33:44 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-05 22:33:44 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-05 22:33:48 INFO  HospitalMS.HospitalmsApplication - Starting HospitalmsApplication using Java 17.0.12 with PID 25504 (D:\Work\Practice\SpringBoot\hospitalms\target\classes started by FD01954 in D:\Work\Practice\SpringBoot\hospitalms)
+2026-10-05 22:33:48 DEBUG HospitalMS.HospitalmsApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-05 22:33:48 INFO  HospitalMS.HospitalmsApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-05 22:33:48 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-05 22:33:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05 22:33:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 5 JPA repository interfaces.
+2026-10-05 22:33:49 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-05 22:33:49 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:33:49 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-05 22:33:49 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-05 22:33:49 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1250 ms
+2026-10-05 22:33:49 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05 22:33:49 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-05 22:33:50 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05 22:33:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-05 22:33:50 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4caf875c
+2026-10-05 22:33:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-05 22:33:50 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hospital_db1]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: hospital_db1/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05 22:33:51 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05 22:33:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:33:52 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05 22:33:53 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05 22:33:53 WARN  o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8c507cba-ce9e-4946-8e7a-d59dfef85e22
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-05 22:33:53 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-05 22:33:54 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:33:54 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-05 22:33:54 INFO  HospitalMS.HospitalmsApplication - Started HospitalmsApplication in 6.323 seconds (process running for 6.778)
+2026-10-05 22:34:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:34:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:34:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:34:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:34:35 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-05 22:34:35 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-05 22:34:35 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2026-10-05 22:35:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:35:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:35:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:35:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:36:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:36:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:36:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:36:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:37:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:37:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:37:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:37:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:38:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:38:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:38:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:38:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:39:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:39:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:39:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:39:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:40:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:40:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:40:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:40:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:40:59 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public HospitalMS.dto.LoginResponseDTO HospitalMS.controller.AuthController.login(HospitalMS.dto.LoginRequestDTO)]
+2026-10-05 22:41:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:41:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:41:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:41:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:41:30 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Invalid username] with root cause
+java.lang.RuntimeException: Invalid username
+	at HospitalMS.service.AuthService.lambda$login$0(AuthService.java:26)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at HospitalMS.service.AuthService.login(AuthService.java:25)
+	at HospitalMS.controller.AuthController.login(AuthController.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$2(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:376)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-05 22:41:40 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Invalid username] with root cause
+java.lang.RuntimeException: Invalid username
+	at HospitalMS.service.AuthService.lambda$login$0(AuthService.java:26)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at HospitalMS.service.AuthService.login(AuthService.java:25)
+	at HospitalMS.controller.AuthController.login(AuthController.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$2(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:376)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-05 22:41:41 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Invalid username] with root cause
+java.lang.RuntimeException: Invalid username
+	at HospitalMS.service.AuthService.lambda$login$0(AuthService.java:26)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at HospitalMS.service.AuthService.login(AuthService.java:25)
+	at HospitalMS.controller.AuthController.login(AuthController.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$2(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:376)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-05 22:41:48 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-05 22:41:49 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-05 22:41:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:41:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-05 22:41:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-05 22:41:52 INFO  HospitalMS.HospitalmsApplication - Starting HospitalmsApplication using Java 17.0.12 with PID 21900 (D:\Work\Practice\SpringBoot\hospitalms\target\classes started by FD01954 in D:\Work\Practice\SpringBoot\hospitalms)
+2026-10-05 22:41:52 DEBUG HospitalMS.HospitalmsApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-05 22:41:52 INFO  HospitalMS.HospitalmsApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-05 22:41:53 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-05 22:41:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05 22:41:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 5 JPA repository interfaces.
+2026-10-05 22:41:54 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-05 22:41:54 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:41:54 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-05 22:41:54 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-05 22:41:54 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1242 ms
+2026-10-05 22:41:54 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05 22:41:54 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-05 22:41:54 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05 22:41:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-05 22:41:54 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50d666a2
+2026-10-05 22:41:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-05 22:41:54 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hospital_db1]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: hospital_db1/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05 22:41:56 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05 22:41:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:41:56 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05 22:41:57 DEBUG H.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-10-05 22:41:57 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05 22:41:57 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-10-05 22:41:58 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:41:58 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-05 22:41:58 INFO  HospitalMS.HospitalmsApplication - Started HospitalmsApplication in 6.284 seconds (process running for 6.786)
+2026-10-05 22:42:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:42:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:42:07 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-05 22:42:07 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-05 22:42:07 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-10-05 22:42:07 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Invalid username] with root cause
+java.lang.RuntimeException: Invalid username
+	at HospitalMS.service.AuthService.lambda$login$0(AuthService.java:26)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at HospitalMS.service.AuthService.login(AuthService.java:25)
+	at HospitalMS.controller.AuthController.login(AuthController.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$2(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:376)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at HospitalMS.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:79)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-05 22:42:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:42:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:43:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:43:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:43:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:43:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:44:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:44:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:44:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:44:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:45:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:45:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:45:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:45:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:46:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:46:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:46:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:46:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:47:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:47:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:47:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:47:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:48:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:48:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:48:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:48:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:49:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:49:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:49:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:49:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:50:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:50:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:50:00 INFO  HospitalMS.service.PatientService - Updating patient with ID PAT-1004
+2026-10-05 22:50:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:50:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:51:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:51:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:51:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:51:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:52:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:52:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:52:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:52:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:53:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:53:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:53:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:53:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:54:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:54:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:54:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:54:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:55:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:55:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:55:08 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-05 22:55:08 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-05 22:55:08 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:55:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-05 22:55:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-05 22:55:14 INFO  HospitalMS.HospitalmsApplication - Starting HospitalmsApplication using Java 17.0.12 with PID 13488 (D:\Work\Practice\SpringBoot\hospitalms\target\classes started by FD01954 in D:\Work\Practice\SpringBoot\hospitalms)
+2026-10-05 22:55:14 DEBUG HospitalMS.HospitalmsApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-05 22:55:14 INFO  HospitalMS.HospitalmsApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-05 22:55:14 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-05 22:55:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05 22:55:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 5 JPA repository interfaces.
+2026-10-05 22:55:15 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-05 22:55:15 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:55:15 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-05 22:55:15 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-05 22:55:15 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1170 ms
+2026-10-05 22:55:15 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05 22:55:15 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-05 22:55:16 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05 22:55:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-05 22:55:16 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50d666a2
+2026-10-05 22:55:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-05 22:55:16 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hospital_db1]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: hospital_db1/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05 22:55:17 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05 22:55:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 22:55:17 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05 22:55:17 DEBUG H.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-10-05 22:55:17 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05 22:55:17 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-10-05 22:55:17 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-05 22:55:17 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-05 22:55:17 INFO  HospitalMS.HospitalmsApplication - Started HospitalmsApplication in 4.067 seconds (process running for 4.539)
+2026-10-05 22:55:28 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-05 22:55:28 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-05 22:55:28 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-10-05 22:55:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:55:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:56:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:56:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:56:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:56:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:57:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:57:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:57:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:57:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:57:56 WARN  H.service.AppointmentService - Deleting appointment APP-1020
+2026-10-05 22:58:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:58:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:58:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:58:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:59:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:59:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:59:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 22:59:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 22:59:46 INFO  HospitalMS.service.PatientService - Updating patient with ID PAT-1004
+2026-10-05 23:00:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:00:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:00:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:00:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:01:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:01:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:01:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:01:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:02:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:02:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:02:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:02:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:03:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:03:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:03:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:03:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:04:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:04:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:04:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:04:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:05:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:05:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:05:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:05:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:06:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:06:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:06:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:06:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:07:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:07:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:07:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:07:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:07:56 INFO  HospitalMS.service.PatientService - Updating patient with ID PAT-1004
+2026-10-05 23:08:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:08:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:08:15 INFO  HospitalMS.service.PatientService - Fetching patient with ID PAT-1005
+2026-10-05 23:08:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:08:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:09:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:09:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:09:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:09:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:10:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:10:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:10:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:10:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:10:38 INFO  H.service.AppointmentService - Appointment booking request received for patient PAT-1005 and doctor DOC-1003
+2026-10-05 23:10:38 WARN  H.service.AppointmentService - Attempted same-day or past booking for 2026-10-05
+2026-10-05 23:10:45 INFO  H.service.AppointmentService - Appointment booking request received for patient PAT-1005 and doctor DOC-1003
+2026-10-05 23:10:45 INFO  H.service.AppointmentService - Appointment booked successfully with ID APP-1021
+2026-10-05 23:11:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:11:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:11:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:11:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:11:56 INFO  HospitalMS.service.PatientService - Updating patient with ID PAT-1004
+2026-10-05 23:12:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:12:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:12:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:12:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:12:46 INFO  HospitalMS.service.PatientService - Updating patient with ID PAT-1004
+2026-10-05 23:13:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:13:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:13:11 INFO  HospitalMS.service.PatientService - Fetching patient with ID PAT-1005
+2026-10-05 23:13:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:13:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:14:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:14:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:14:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:14:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:15:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:15:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:15:22 INFO  H.service.AppointmentService - Appointment booking request received for patient PAT-1005 and doctor DOC-1003
+2026-10-05 23:15:22 INFO  H.service.AppointmentService - Appointment booked successfully with ID APP-1022
+2026-10-05 23:15:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:15:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:16:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:16:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:16:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:16:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:17:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:17:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:17:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:17:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:18:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:18:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:18:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:18:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:19:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:19:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:19:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:19:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:20:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:20:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:20:21 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-05 23:20:22 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-05 23:20:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 23:20:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-05 23:20:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-05 23:21:57 INFO  HospitalMS.HospitalmsApplication - Starting HospitalmsApplication using Java 17.0.12 with PID 14348 (D:\Work\Practice\SpringBoot\hospitalms\target\classes started by FD01954 in D:\Work\Practice\SpringBoot\hospitalms)
+2026-10-05 23:21:57 DEBUG HospitalMS.HospitalmsApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-05 23:21:57 INFO  HospitalMS.HospitalmsApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-05 23:21:57 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-05 23:21:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05 23:21:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 5 JPA repository interfaces.
+2026-10-05 23:21:58 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-05 23:21:58 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-05 23:21:58 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-05 23:21:58 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-05 23:21:58 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1250 ms
+2026-10-05 23:21:59 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05 23:21:59 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-05 23:21:59 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05 23:21:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-05 23:21:59 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50d666a2
+2026-10-05 23:21:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-05 23:21:59 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hospital_db1]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: hospital_db1/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05 23:22:01 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05 23:22:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 23:22:01 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05 23:22:02 DEBUG H.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-10-05 23:22:02 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05 23:22:02 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-10-05 23:22:03 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-05 23:22:03 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-05 23:22:03 INFO  HospitalMS.HospitalmsApplication - Started HospitalmsApplication in 6.552 seconds (process running for 7.013)
+2026-10-05 23:22:28 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-05 23:22:28 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-05 23:22:28 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-10-05 23:22:28 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getAuthorities()" because "authentication" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getAuthorities()" because "authentication" is null
+	at HospitalMS.controller.AuthController.testRole(AuthController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$2(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:376)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at HospitalMS.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:79)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-05 23:22:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:22:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:23:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:23:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:23:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:23:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:24:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:24:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:24:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:24:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:25:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:25:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:25:30 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:25:30 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:26:00 INFO  H.service.DoctorScheduleService - Daily doctor schedule job started
+2026-10-05 23:26:00 INFO  H.service.DoctorScheduleService - Doctor schedule report generated successfully
+2026-10-05 23:26:05 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-05 23:26:05 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-05 23:26:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05 23:26:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-05 23:26:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
