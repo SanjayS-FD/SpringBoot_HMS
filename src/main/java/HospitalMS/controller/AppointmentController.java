@@ -65,4 +65,11 @@ public class AppointmentController {
     public String checkAvailability(@RequestParam String doctorId, @RequestParam String date, @RequestParam String time) {
         return service.checkAvailability(doctorId, date, time);
     }
+
+    @GetMapping("/{doctorId}/today-appointments")
+    public List<Appointment> getTodaysAppointments(
+            @PathVariable String doctorId) {
+
+        return service.getTodaysAppointments(doctorId);
+    }
 }

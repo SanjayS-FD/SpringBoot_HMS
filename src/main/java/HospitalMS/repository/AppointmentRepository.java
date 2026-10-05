@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import HospitalMS.model.Appointment;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -19,4 +20,8 @@ public interface AppointmentRepository
             String appointmentDate,
             String appointmentTime
     );
+
+    List<Appointment> findByDoctor_DoctorIdAndAppointmentDate(
+            String doctorId,
+            String appointmentDate);
 }

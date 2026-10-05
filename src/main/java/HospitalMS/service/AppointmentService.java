@@ -78,17 +78,23 @@ public class AppointmentService implements AppointmentServiceInterface {
                     "Date must be in yyyy-MM-dd and time must be in HH:mm format");
         }
 
-        if (appointmentDate.isBefore(
-                LocalDate.now())) {
+        /*
+         * Appointments must be booked at least
+         * one day in advance
+         */
+        if (!appointmentDate.isAfter(LocalDate.now())) {
 
             log.warn(
-                    "Invalid appointment time {}",
-                    appointmentTime);
+                    "Attempted same-day or past booking for {}",
+                    appointmentDate);
 
             throw new AppointmentConflictException(
-                    "Appointment date cannot be in the past");
+                    "Appointments must be booked at least one day in advance");
         }
 
+        /*
+         * Maximum booking window = 3 months
+         */
         if (appointmentDate.isAfter(
                 LocalDate.now().plusMonths(3))) {
 
@@ -100,20 +106,24 @@ public class AppointmentService implements AppointmentServiceInterface {
                     "Appointments can only be booked up to 3 months in advance");
         }
 
+        /*
+         * Doctor working hours
+         */
         LocalTime startTime =
                 LocalTime.of(9, 0);
 
         LocalTime endTime =
                 LocalTime.of(17, 0);
 
-        if (appointmentDate.isBefore(LocalDate.now())) {
+        if (appointmentTime.isBefore(startTime)
+                || appointmentTime.isAfter(endTime)) {
 
             log.warn(
-                    "Attempted booking with past date {}",
-                    appointmentDate);
+                    "Invalid appointment time {}",
+                    appointmentTime);
 
             throw new AppointmentConflictException(
-                    "Appointment date cannot be in the past");
+                    "Appointments can only be booked between 09:00 AM and 05:00 PM");
         }
 
         boolean alreadyBooked =
@@ -134,6 +144,7 @@ public class AppointmentService implements AppointmentServiceInterface {
             throw new AppointmentConflictException(
                     "Doctor already booked for this slot");
         }
+
         Appointment appointment =
                 new Appointment();
 
@@ -282,6 +293,15 @@ public class AppointmentService implements AppointmentServiceInterface {
         }
 
         return "Doctor Available";
+    }
+
+    public List<Appointment> getTodaysAppointments(
+            String doctorId) {
+
+        return appointmentRepository
+                .findByDoctor_DoctorIdAndAppointmentDate(
+                        doctorId,
+                        LocalDate.now().toString());
     }
 
 }

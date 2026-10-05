@@ -1,0 +1,27 @@
+Doctor Schedule Report
+Date : 2026-09-29
+
+Doctor : DOC-1001 (Dr. Prithika)
+Appointments : 0
+---------------------------------
+Doctor : DOC-1002 (Dr. Dharvesh)
+Appointments : 2
+   Appointment ID : APP-1013
+   Patient ID     : PAT-1002
+   Time           : 10:30
+
+   Appointment ID : APP-1017
+   Patient ID     : PAT-1001
+   Time           : 13:30
+
+---------------------------------
+Doctor : DOC-1003 (Dr. Sasmita)
+Appointments : 1
+   Appointment ID : APP-1018
+   Patient ID     : PAT-1003
+   Time           : 09:30
+
+---------------------------------
+Doctor : DOC-1004 (Dr. Nanda)
+Appointments : 0
+---------------------------------

@@ -9,6 +9,7 @@ import org.hibernate.annotations.NamedEntityGraphs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+
 import HospitalMS.model.Patient;
 import HospitalMS.service.PatientService;
 
@@ -58,6 +59,4 @@ public class PatientController {
                 id,
                 patient);
     }
-
-
 }
