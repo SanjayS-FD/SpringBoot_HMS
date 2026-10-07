@@ -6,11 +6,14 @@ import HospitalMS.dto.DoctorRequestDTO;
 import HospitalMS.model.Patient;
 import HospitalMS.serviceInterfaces.DoctorServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 
 import HospitalMS.model.Doctor;
 import HospitalMS.repository.DoctorRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 
 
 @Slf4j
@@ -43,11 +46,15 @@ public class DoctorService implements DoctorServiceInterface {
     }
 
     @Override
+    @Cacheable(
+            value = "doctors",
+            key = "#id")
     public Doctor getDoctorById(String id) {
 
         log.info(
-                "Fetching doctor with ID {}",
+                "Fetching doctor {} from DATABASE",
                 id);
+
         return repository.findByDoctorId(id).orElse(null);
     }
 
@@ -57,6 +64,9 @@ public class DoctorService implements DoctorServiceInterface {
     }
 
     @Override
+    @CacheEvict(
+            value = "doctors",
+            key = "#id")
     public void deleteDoctor(String id) {
         Doctor doctor =
                 repository.findByDoctorId(id)
@@ -73,9 +83,14 @@ public class DoctorService implements DoctorServiceInterface {
     }
 
     @Override
+    @CachePut(
+            value = "doctors",
+            key = "#id")
     public Doctor updateDoctor(
             String id,
             DoctorRequestDTO dto) {
+
+        log.info("Updating doctor {} and cache", id);
 
         Doctor doctor =
                 repository.findByDoctorId(id)

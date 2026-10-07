@@ -26,8 +26,8 @@ public class DoctorScheduleService {
     @Autowired
     private AppointmentRepository appointmentRepository;
 
-    @Scheduled(cron = "*/30 * * * * *") // testing
-    // @Scheduled(cron = "0 0 9 * * *") // production
+    // @Scheduled(cron = "*/30 * * * * *") // testing
+     @Scheduled(cron = "0 0 9 * * *") // production
     public void generateDailyDoctorSchedule() {
 
         log.info("Daily doctor schedule job started");
