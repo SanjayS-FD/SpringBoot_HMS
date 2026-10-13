@@ -15,7 +15,7 @@ public class CacheConfig {
     public CacheManager cacheManager() {
 
         CaffeineCacheManager cacheManager =
-                new CaffeineCacheManager("doctors");
+                new CaffeineCacheManager("doctors","patients");
 
         cacheManager.setCaffeine(
                 Caffeine.newBuilder()

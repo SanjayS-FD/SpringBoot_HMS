@@ -5,6 +5,9 @@ import java.util.List;
 import HospitalMS.dto.PatientRequestDTO;
 import HospitalMS.serviceInterfaces.PatientServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import HospitalMS.model.Patient;
@@ -43,12 +46,18 @@ public class PatientService implements PatientServiceInterface {
     }
 
     @Override
+    @Cacheable(
+            value = "patients",
+            key = "#id")
     public Patient getPatientById(String id) {
 
         log.info(
-                "Fetching patient with ID {}",
+                "Fetching patient {} from DATABASE",
                 id);
-        return repository.findByPatientId(id).orElse(null);
+
+        return repository
+                .findByPatientId(id)
+                .orElse(null);
     }
 
 
@@ -58,6 +67,9 @@ public class PatientService implements PatientServiceInterface {
     }
 
     @Override
+    @CacheEvict(
+            value = "patients",
+            key = "#id")
     public void deletePatient(String id) {
         Patient patient = repository.findByPatientId(id).orElse(null);
 
@@ -71,6 +83,9 @@ public class PatientService implements PatientServiceInterface {
     }
 
     @Override
+    @CachePut(
+            value = "patients",
+            key = "#id")
     public Patient updatePatient(
             String id,
             PatientRequestDTO dto) {
@@ -89,9 +104,9 @@ public class PatientService implements PatientServiceInterface {
         patient.setPhoneNum(dto.getPhoneNum());
         patient.setAge(dto.getAge());
 
-        log.info(
-                "Updating patient with ID {}",
-                id);
+        log.info("Updating patient {} and cache",
+                        id);
+
         return repository.save(patient);
     }
 }

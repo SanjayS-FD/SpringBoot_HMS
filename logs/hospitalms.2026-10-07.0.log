@@ -139,3 +139,8 @@
 2026-10-07 11:30:45 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
 2026-10-07 11:31:03 INFO  HospitalMS.service.DoctorService - Fetching doctor DOC-1003 from DATABASE
 2026-10-07 11:31:49 INFO  HospitalMS.service.DoctorService - Updating doctor DOC-1003 and cache
+2026-10-07 13:02:30 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-07 13:02:30 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-07 13:02:30 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07 13:02:30 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-07 13:02:30 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
